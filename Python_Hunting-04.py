@@ -1,4 +1,7 @@
-import pygame, sys, time, random
+import pygame
+import random
+import sys
+
 from pygame.locals import *
 
 pygame.init()
@@ -31,7 +34,7 @@ class Mike:
         self.x = 300
         self.y = 400
 
-    def hit_by(self, raindrop):
+    def hit_by(self, raindrop: Raindrop):
         return pygame.Rect(self.x, self.y, 170, 192).collidepoint((raindrop.x, raindrop.y))
 
     def draw(self):
