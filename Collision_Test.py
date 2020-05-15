@@ -31,7 +31,7 @@ while not done:
 
         elif event.type == pygame.MOUSEBUTTONUP:
             mouse_position = pygame.mouse.get_pos()  # Location of the mouse-click
-            if click_rect.collidepoint(mouse_position):  # Was that click inside our rectangle 
+            if click_rect.collidepoint(mouse_position[0], mouse_position[1]):  # Was that click inside our rectangle
                 print("hit")
                 # Flip the colour of the rect
                 if rect_colour == BLACK:
