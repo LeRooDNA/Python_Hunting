@@ -35,7 +35,7 @@ class Mike:
         self.y = 400
 
     def hit_by(self, raindrop: Raindrop):
-        return pygame.Rect(self.x, self.y, 170, 192).collidepoint((raindrop.x, raindrop.y))
+        return pygame.Rect(self.x, self.y, 170, 192).collidepoint(raindrop.x, raindrop.y)
 
     def draw(self):
         screen.blit(mike_image_umbrella, (self.x, self.y))
